@@ -40,6 +40,14 @@ int readLength;
 
 void setup() {
   Serial.println("Setup");
+
+  pinMode(leftCenterSensor, INPUT);
+  pinMode(leftNearSensor, INPUT);
+  pinMode(leftFarSensor, INPUT);
+  pinMode(rightCenterSensor, INPUT);
+  pinMode(leftNearSensor, INPUT);
+  pinMode(leftFarSensor, INPUT);
+  
   pinMode(leftMotor1, OUTPUT);
   pinMode(leftMotor2, OUTPUT);
   pinMode(rightMotor1, OUTPUT);
@@ -47,6 +55,8 @@ void setup() {
 
   pinMode(enl, OUTPUT);
   pinMode(enr, OUTPUT);
+
+  Serial.begin(9600);
   Serial.println("Setup Done...");
   delay(5000);
 }
